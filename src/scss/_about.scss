@@ -1,0 +1,114 @@
+.about {
+	.container {
+		margin: 90px auto 110px auto;
+		.col-lg-10 {
+			margin: 0 auto;
+			margin-bottom: 98px;
+			.description_sect {
+				@include descr_section;	
+			}
+		}
+		.col-lg-12 {
+			margin: 0 auto;
+			.cards-about {
+				display: flex;
+				justify-content: center;
+				.cards-about-wrap {
+					position: relative;
+					&::before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: $turquoise;
+						z-index: -1;
+					}
+					&:not(:last-child) {
+						margin-right: 30px;
+					}
+					.card_about {
+						position: relative;
+						z-index: 0;
+						transition: transform 0.2s ease;
+						&::after {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							z-index: 1;
+							@include linear_gradient;
+							opacity: 0;
+							transition: opacity 0.2s ease;
+						}
+						img {
+							width: 100%;
+							height: auto;
+							display: block;
+							position: relative;
+							z-index: 0;
+						}
+						span {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%) !important;
+							z-index: 2;
+							color: #fff;
+							font-family: $h_f;
+							font-weight: bold;
+							font-size: 18px;
+							text-transform: uppercase;
+							text-align: center;
+							opacity: 0;
+							transition: opacity 0.2s ease;
+							i {
+								padding-bottom: 8px;
+								font-size: 20px;
+							}
+						}
+						&:hover {
+							transform: translateX(-7px) translateY(-7px);
+						}
+						&:hover::after {
+							opacity: 0.9;
+						}
+						&:hover span {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	.container-fluid {
+		background: $turquoise;
+		.container {
+			margin: 0 auto 0 auto;
+			.col-lg-12 {
+				margin: 70px 0 88px 0;
+				justify-content: center;
+				.statistics {
+					color: #fff;
+					text-align: center;
+					margin: 0 46px;
+					span {
+						display: block;
+						font-weight: bold;
+						font-size: 72px;
+						font-family: $h_f;
+					}
+					p {
+						font-family: $h_f;
+						font-size: 14px;
+						text-transform: uppercase;
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
+}

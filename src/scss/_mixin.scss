@@ -1,0 +1,77 @@
+@mixin descr_section() {
+				text-align: center;
+			h2 {
+				font-family: $h_f;
+				font-size: 30px;
+				font-weight: bold;
+				color: $h_c;
+				text-transform: uppercase;
+				span {
+					font-family: $h_f_curs;
+					font-weight: normal;
+					text-transform: none;
+					color: $h_c;
+					font-size: 24px;
+					display: block;
+					padding-bottom: 10px;
+				}
+			}
+			.line {
+				height: 3px;
+				width: 60px;
+				background: $red;
+				margin: 0 auto;
+				margin-top: 32px;
+			}
+			.text {
+				margin-top: 38px;
+				font-size: 15px;
+				color: $p_c;
+				font-family: $p_f;
+				line-height: 24px;
+			}
+}
+@mixin descr_section_mobile() {
+				text-align: center;
+			h2 {
+				font-family: $h_f;
+				font-size: 26px;
+				font-weight: bold;
+				color: $h_c;
+				text-transform: uppercase;
+				span {
+					font-family: $h_f_curs;
+					font-weight: normal;
+					text-transform: none;
+					color: $h_c;
+					font-size: 20px;
+					display: block;
+					padding-bottom: 6px;
+				}
+			}
+			.line {
+				height: 3px;
+				width: 60px;
+				background: $red;
+				margin: 0 auto;
+				margin-top: 16px;
+			}
+			.text {
+				margin-top: 18px;
+				font-size: 15px;
+				color: $p_c;
+				font-family: $p_f;
+				line-height: 24px;
+			}
+}
+
+
+@mixin linear_gradient() {
+	background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+
+@mixin line() {
+	height: 3px;
+	width: 60px;
+	background: $red;
+}
